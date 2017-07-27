@@ -5,5 +5,14 @@
     "private": true,
     "dependencies": {
         "express": "3.x"
-    }
+    },
+    
+     "engines": {
+    "node": "v6.10.0",
+    "npm": "3.10.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LSenadheera/shoppingBuddy.git"
+  }
 }
