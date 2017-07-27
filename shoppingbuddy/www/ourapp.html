@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+	
+
+    <link rel="manifest" href="manifest.json">
+		
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+	
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="ionicApp" ng-controller="AppController" onload="sliderFunc()">
+
+   <ion-view title="ShoppingBuddy Mobile App">
+        <ion-content padding="true">
+         
+<div id = "container" style = "width:100%;margin-top:4%; margin-left:5%">
+
+ <div id ="left" style = "float:left; width: 40%;">
+ 
+ <!---TEST------------------------------------->
+ <div id ="left" style = "float:left; width: 60%;">
+
+<div>
+	<div style="float:left;width:20%;margin-right:-12%;margin-top:50%"><a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="start_slideshow()"></a></div>
+    <img ng-src="{{sl}}"  style="float:left;height: 70%; width:72%;transition: 1s opacity linear;" ng-click="start_slideshow()">
+	<div style="float:left;width:20%;margin-top:50%"><a class="button icon-left ion-chevron-right button-clear button-dark" ng-click="start_slideshow()"></a></div>
+	</div>
+
+</div>
+<!---TEST------------------------------------->
+
+
+<div id ="left" style = "float:left; width: 40%; margin-top:10%;">
+
+<DIV style = "float:left; width: 100%; margin-top:2%">
+<div id ="left" style = "float:left; width: 20%;">
+<img  src="img/appf1.png" style="width:100%">
+
+</div>
+<div id ="left" style = "float:left; width: 72%;margin-left:8%;margin-top:2%">
+<b>Shopping Cart</b>
+<p> Create your shopping cart at anywhere anytime.</p>
+</div>
+</DIV>
+
+<DIV style = "float:left; width: 100%;margin-top:4%">
+<div id ="left" style = "float:left; width: 20%;">
+<img  src="img/appf2.png" style="width:100%">
+
+</div>
+<div id ="left" style = "float:left; width: 72%;margin-left:8%;margin-top:2%">
+<b>Guidance Map</b>
+<p>Stop searching here and there, Find your products easily</p>
+</div>
+</DIV>
+
+<DIV style = "float:left; width: 100%;margin-top:4%">
+<div id ="left" style = "float:left; width: 20%;">
+<img  src="img/appf3.png" style="width:100%">
+
+</div>
+<div id ="left" style = "float:left; width: 72%;margin-left:8%;margin-top:2%">
+<b>Share Shopping List</b>
+<p> Share your list with your friends or family and shop together</p>
+</div>
+</DIV>
+
+
+</div>
+
+</div>
+
+	 <div class = "list card" style = "float:left; width: 46%; margin-top:1%;margin-left:4%;">
+	 
+	 <h2 style="margin-top:10px; margin-left:10px">
+Download ShoppingBuddy App</h2>
+<p style=" margin-left:100px"> Scan the QR code with your mobile phone camera and download the application</p>
+<div style="margin-left:35%;margin-top:3%">
+
+<img  src="img/qr.png" style="width:50%">
+
+</div>
+<p style="margin-left:5%;margin-top:6%">
+"Always provide you with the best shopping solutions in life. Partner with us and save time."
+</p>
+</div>
+  
+   
+
+	</div>
+
+        </ion-content>
+      </ion-view>
+
+	  
+	  
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+  </body>
+  
+</html>

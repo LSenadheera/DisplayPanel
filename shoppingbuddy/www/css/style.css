@@ -1,0 +1,32 @@
+/* Empty. Add your own CSS if you like */
+.box{
+  height: 100%;
+}
+ion-slides{
+  height: 100vh !important;
+}
+
+$base-color: #c24;
+$num-colors: 10;
+
+@for $i from 0 to $num-colors {
+    .bgColor_#{$i} {
+      background-color: adjust-hue($base-color, 360deg / $num-colors * $i);
+    }
+}
+
+
+	#slides_control > div{
+  height: 200px;
+}
+img{
+  margin:auto;
+  width: 400px;
+}
+#slides_control {
+  position:absolute;
+  width: 400px;
+  left:50%;
+  top:20px;
+ margin-left:-200px;
+}

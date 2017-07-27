@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="angular-resource.min.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="myCtrl">
+
+    <ion-pane>
+      
+      <ion-content>
+	  <div align="center">
+	  <img src="img/B.jpg" height="50%" width="70%" align="center">
+	</div>
+	<div class="list list-inset">
+	
+    
+   
+  <label class="item item-input">
+    <i class="icon ion-person placeholder-icon"></i><input type="text" ng-model="usernm" name="usernm" placeholder="Username">
+  </label>
+  <label class="item item-input">
+    <i class="icon ion-locked placeholder-icon"></i><input type="password" ng-model="pw" name="pw"  placeholder="Password">
+  </label>
+  
+	  <button ng-click='go()' class="button button-positive button-full" style="background-color: #9cdb4e;">
+  Login
+</button>
+
+</div>
+  <div align="center">
+<ion-item> <ion-label><a>Forgot Password?</a></ion-label> </ion-item>
+</div>
+	   </ion-content>
+    </ion-pane>
+	   
+<script>
+var app = angular.module('starter', []);
+
+
+app.controller('myCtrl', function($scope, $http) {
+
+    $http.get("http://localhost:3000/log")
+        .then(function (response) {
+            $scope.myWelcome = response.data;
+        });
+
+    $scope.go = function () {
+        $http({method: 'GET',
+            url: 'http://localhost:3000/reg/'+$scope.usernm + '/'+$scope.pw,
+            //data: JSON( {"name": "NASH"})
+            })
+            .then(function (response) {
+                $scope.temp = angular.fromJson(response);
+                console.log(response);
+                alert(response.data.pw);
+            });
+    }
+});
+
+
+app.controller('test', function($scope,$http){
+    $http.post("http://localhost:3000/reg",{"id" : $scope.value1})
+        .then(function(response){
+            alert("DONE");
+        });
+});
+
+</script>
+
+   
+  </body>
+  
+</html>

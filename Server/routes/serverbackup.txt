@@ -1,0 +1,57 @@
+
+var mongo = require('mongodb');
+
+var Server = mongo.Server,
+    Db = mongo.Db,
+    BSON = mongo.BSONPure;
+
+//mongo ip
+var server = new Server('localhost', 27017, {auto_reconnect: true});
+db = new Db('shop', server);
+
+db.open(function(err, db) {
+    if(!err) {
+        console.log("Connected to 'shop' database");
+    }
+});
+
+
+exports.test = function(req, res) {
+    var id = req.params.id;
+    var age = req.params.age;
+    //var name = req.data.name;
+
+    //console.log('logged as: ' + req.data.name);
+    console.log('logged as: ' + id);
+    console.log('age: ' + age);
+    db.collection('Login', function(err, collection) {
+       collection.findOne({'name':id}, function(err, item) {
+		   console.log('item: ' + item);
+        res.send(item);
+        });
+    });
+};
+
+exports.fruit = function(req, res) {
+    
+    //var name = req.data.name;
+
+    //console.log('logged as: ' + req.data.name);
+    console.log('called fruits');
+    //console.log('age: ' + age);
+    db.collection('Fruits', function(err, collection) {
+       collection.find().toArray(function(err, items) {
+          if (err) {
+            reject(err);
+          } else {
+            console.log(items);
+            //resolve(items);
+          }          
+        
+	   //var a = cursor.toArray();
+	   //var b = JSON.stringify(a)
+	   console.log('length: ' +items);
+        res.send(items);
+        });
+    });
+};

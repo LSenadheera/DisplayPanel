@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+.opaq-bg:hover {
+    
+
+   background-image: url('img/1.jpg');
+}
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="Ionicapp" ng-controller="HomeController">
+  <ion-view title="Products">
+
+   <ion-view title="Welcome To Shopping Buddy">
+        <ion-content padding="true">
+         
+        
+<div id = "container" style = "width:98%;margin-left:10%;margin-top:0.5%">
+
+
+<div class="list card" style="float:left;width:25%;margin-bottom:-5%">
+<a  ui-sref="app.fruits">
+  
+ 
+  <div ng-init="bg1 = 'img/1.jpg'" 
+    ng-mouseenter="bg1 = 'img/1b.jpg'" 
+    ng-mouseleave="bg1 = 'img/1.jpg'" 
+    >
+	
+    <img src="{{bg1}}"  style="height: 170px; width:100%" ng-click='start_fruit()'>
+	</div>
+
+</a>
+</div>
+
+
+
+<div class="list card" style="float:left;margin-left:3%;width:25%" >
+<a  ui-sref="app.fruits">
+  
+  <div ng-init="bg2 = 'img/2.jpg'" 
+    ng-mouseenter="bg2 = 'img/2b.jpg'" 
+    ng-mouseleave="bg2 = 'img/2.jpg'" 
+    >
+	
+    <img src="{{bg2}}"  style="height: 170px; width:100%" ng-click='start_vege()'>
+	</div>
+
+</a>
+</div>
+
+
+<div class="list card" style="float:left;margin-left:3%;width:25%" >
+<a  ui-sref="app.fruits">
+  
+  <div ng-init="bg4 = 'img/4.jpg'" 
+    ng-mouseenter="bg4 = 'img/4b.jpg'" 
+    ng-mouseleave="bg4 = 'img/4.jpg'" 
+    >
+	
+    <img src="{{bg4}}"  style="height: 170px; width:100%" ng-click='start_meat()'>
+	</div>
+</a>
+</div>
+
+
+
+ 
+<div class="list card" style="float:left;width:25%;margin-top:-0.5%" >
+<a  ui-sref="app.fruits">
+
+
+<div ng-init="bg5 = 'img/5.jpg'" 
+    ng-mouseenter="bg5 = 'img/5b.jpg'" 
+    ng-mouseleave="bg5 = 'img/5.jpg'" 
+    >
+	
+    <img src="{{bg5}}"  style="height: 170px; width:100%" ng-click='start_beverage()'>
+	</div>
+</a>
+</div>
+
+
+<div class="list card" style="float:left;margin-left:3%;width:25%;margin-top:-0.5%" >
+<a  ui-sref="app.fruits">
+
+<div ng-init="bg3 = 'img/3.jpg'" 
+    ng-mouseenter="bg3 = 'img/3b.jpg'" 
+    ng-mouseleave="bg3= 'img/3.jpg'" 
+    >
+	
+    <img src="{{bg3}}"  style="height: 170px; width:100%" ng-click='start_dairy()'>
+	</div>
+</a>
+</div>
+
+
+<div class="list card" style="float:left;margin-left:3%;width:25%;margin-top:-0.5%" >
+<a  ui-sref="app.fruits">
+
+    
+<div ng-init="bg6 = 'img/6.jpg'" 
+    ng-mouseenter="bg6 = 'img/6b.jpg'" 
+    ng-mouseleave="bg6 = 'img/6.jpg'" 
+    >
+	
+    <img src="{{bg6}}"  style="height: 170px; width:100%" ng-click='start_canned()'>
+	</div>
+</a>
+</div>
+
+
+<div class="list card" style="float:left;width:25%;margin-top:-0.5%" >
+<a  ui-sref="app.fruits">
+    
+<div ng-init="bg8 = 'img/8.jpg'" 
+    ng-mouseenter="bg8 = 'img/8b.jpg'" 
+    ng-mouseleave="bg8 = 'img/8.jpg'" 
+    >
+	
+    <img src="{{bg8}}"  style="height: 170px; width:100%" ng-click='start_paper()'>
+	</div>
+</a>
+</div>
+
+
+
+<div class="list card" style="float:left;margin-left:3%;width:25%;margin-top:-0.5%" >
+<a  ui-sref="app.fruits">
+	
+	
+	<div ng-init="bg7 = 'img/7.jpg'" 
+    ng-mouseenter="bg7 = 'img/7b.jpg'" 
+    ng-mouseleave="bg7 = 'img/7.jpg'" 
+    >
+	
+    <img src="{{bg7}}"  style="height: 170px; width:100%" ng-click='start_personal()'>
+	</div>
+</a>
+</div>
+
+<div class="list card" style="float:left;margin-left:3%;width:25%;margin-top:-0.5%" >
+<a  ui-sref="app.fruits">
+  
+  <div ng-init="bg = 'img/9.jpg'" 
+    ng-mouseenter="bg = 'img/9b.jpg'" 
+    ng-mouseleave="bg = 'img/9.jpg'" 
+    >
+	<img src="{{bg}}"  style="height: 170px; width:100%" ng-click='start_other()'>
+</div>
+    
+
+</a>
+</div>
+
+
+
+        </ion-content>
+      </ion-view>
+
+   
+  </body>
+  
+</html>
+

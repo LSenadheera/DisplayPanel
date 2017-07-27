@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="Ionicapp" ng-controller="MyCtrl">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable" style="background-color : #9cdb4e;">
+	  <button class="button icon-left ion-home">Home</button>
+        <h1 class="title" >Product List</h1>
+		<button class="button button-icon icon ion-navicon"></button>
+      </ion-header-bar>
+      <ion-content>
+	  <div class="list">
+	  
+
+  <div class="item item-divider" style="background-color : #279104;">
+Meat
+  </div>
+
+  <ion-list> 
+<ion-item> 
+<ion-avatar item-left> <img src="img/m1.jpg" style="width:10%; height:20%; float:left; margin-right:20px;"> </ion-avatar>
+<div style="float:left;">
+<h2>Beef</h2> 
+<h3>-</h3> 
+<p>208.00 Rupees</p>
+</div>
+
+
+ </ion-item> 
+ 
+<ion-item> 
+<ion-avatar item-left> <img src="img/m2.jpg" style="width:10%; height:20%; float:left; margin-right:20px;"> </ion-avatar>
+<div style="float:left;">
+<h2>Pork</h2> 
+<h3>-</h3> 
+<p>310.00 Rupees</p> 
+
+</div>
+
+</ion-item>
+
+<ion-item> 
+<ion-avatar item-left> <img src="img/m3.jpg" style="width:10%; height:20%; float:left; margin-right:20px;"> </ion-avatar>
+<div style="float:left;">
+<h2>Mutton</h2> 
+<h3>-</h3> 
+<p>243.00 Rupees</p> 
+</div>
+
+</ion-item> 
+
+<ion-item> 
+<ion-avatar item-left> <img src="img/m4.jpg" style="width:10%; height:20%; float:left; margin-right:20px;"> </ion-avatar>
+<div style="float:left;">
+<h2>Bacon</h2> 
+<h3>Slices</h3> 
+<p>285.00 Rupees</p> 
+</div>
+
+</ion-item> 
+
+<ion-item> 
+<ion-avatar item-left> <img src="img/m5.png" style="width:10%; height:20%; float:left; margin-right:20px;"> </ion-avatar>
+<div style="float:left;">
+<h2>Bacon</h2> 
+<h3>Strips</h3> 
+<p>409.00 Rupees</p> 
+</div>
+
+</ion-item> 
+
+</ion-list>
+  
+  
+
+	   </ion-content>
+    </ion-pane>
+	   
+<script>
+angular.module('Ionicapp', ['ionic'])
+
+.controller('MyCtrl', function($scope) {
+
+  
+});
+</script>
+
+   
+  </body>
+  
+</html>
