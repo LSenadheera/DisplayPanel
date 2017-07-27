@@ -14,6 +14,11 @@
     "gulp-util": "^2.2.14",
     "shelljs": "^0.3.0"
   },
+  
+  "engines": {
+    "node": "v6.10.0",
+    "npm": "3.10.10"
+  },
   "cordovaPlugins": [
     "cordova-plugin-whitelist",
     "cordova-plugin-console",
